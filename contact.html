@@ -56,18 +56,18 @@
 
         <div class="ui vertical stripe segment">
             <div class="ui text container">
-                <form class="ui form">
+                <form class="ui form" action="https://formspree.io/f/xknnzpbr" method="POST">
                     <div class="field">
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="name" placeholder="Name" required>
                     </div>
                     <div class="field">
                         <label>Email</label>
-                        <input type="email" name="email" placeholder="Email">
+                        <input type="email" name="_replyto" placeholder="Email" required>
                     </div>
                     <div class="field">
                         <label>Message</label>
-                        <textarea></textarea>
+                        <textarea name="message" required></textarea>
                     </div>
                     <button class="ui button" type="submit">Submit</button>
                 </form>
@@ -103,18 +103,6 @@
     <script>
         $(document)
             .ready(function () {
-                // fix menu when passed
-                $('.masthead')
-                    .visibility({
-                        once: false,
-                        onBottomPassed: function () {
-                            $('.fixed.menu').transition('fade in');
-                        },
-                        onBottomPassedReverse: function () {
-                            $('.fixed.menu').transition('fade out');
-                        }
-                    });
-
                 // create sidebar and attach to menu open
                 $('.ui.sidebar')
                     .sidebar('attach events', '.toc.item');
