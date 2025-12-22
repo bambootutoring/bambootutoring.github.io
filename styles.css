@@ -191,6 +191,11 @@
         display: flex !important;
     }
 
+    /* Prevent fixed header from covering sidebar items */
+    .ui.sidebar.menu {
+        padding-top: 70px !important;
+    }
+
     .ui.menu.bamboo-nav .item:not(.header):not(.toc) {
         display: none !important;
     }
