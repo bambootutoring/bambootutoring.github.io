@@ -67,39 +67,6 @@
     padding: 5em 0em;
 }
 
-.secondary.pointing.menu .toc.item {
-    display: none;
-}
-
-@media only screen and (max-width: 700px) {
-    .ui.fixed.menu {
-        display: none !important;
-    }
-
-    .secondary.pointing.menu .item,
-    .secondary.pointing.menu .menu {
-        display: none;
-    }
-
-    .secondary.pointing.menu .toc.item {
-        display: block;
-    }
-
-    .masthead.segment {
-        min-height: 350px;
-    }
-
-    .masthead h1.ui.header {
-        font-size: 2em;
-        margin-top: 1.5em;
-    }
-
-    .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1.5em;
-    }
-}
-
 /* Primary Green Override */
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
@@ -118,6 +85,10 @@
     background-color: #ffffff !important;
     border: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ui.menu.bamboo-nav .toc.item {
+    display: none;
 }
 
 .ui.menu.bamboo-nav .item {
@@ -212,4 +183,35 @@
 
 .ui.table.subject-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+/* Mobile Responsiveness - placed at bottom for overrides */
+@media only screen and (max-width: 700px) {
+    .ui.fixed.menu.bamboo-nav {
+        display: flex !important;
+    }
+
+    .ui.menu.bamboo-nav .item:not(.header):not(.toc) {
+        display: none !important;
+    }
+
+    /* Specifically ensure the toc item is visible on mobile */
+    .ui.menu.bamboo-nav .toc.item {
+        display: block !important;
+        padding: 0.7em 1.1em !important;
+    }
+
+    .masthead.segment {
+        min-height: 350px;
+    }
+
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
 }
