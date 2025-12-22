@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Bamboo STEM Tutoring</title>
+    <title>Contact Us | Bamboo STEM Tutoring</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -17,54 +17,56 @@
     <div class="ui large fixed borderless menu bamboo-nav">
         <div class="ui container">
             <a href="index.html" class="header item">
-                <img src="assets/logo-mini.png" alt="Bamboo Logo" class="nav-logo">
+                <img src="assets/logo-mini.png" alt="Bamboo Logo">
                 Bamboo STEM Tutoring
             </a>
-            <a href="index.html" class="active item">Home</a>
+            <a href="index.html" class="item">Home</a>
             <a href="about.html" class="item">About Us</a>
             <a href="services.html" class="item">Our Services</a>
             <a href="pricing.html" class="item">Pricing</a>
             <a href="faqs.html" class="item">FAQs</a>
-            <a href="contact.html" class="item">Contact Us</a>
+            <a href="contact.html" class="active item">Contact Us</a>
         </div>
     </div>
 
     <!-- Sidebar Menu (for mobile) -->
     <div class="ui vertical inverted sidebar menu">
-        <a href="index.html" class="active item">Home</a>
+        <a href="index.html" class="item">Home</a>
         <a href="about.html" class="item">About Us</a>
         <a href="services.html" class="item">Our Services</a>
         <a href="pricing.html" class="item">Pricing</a>
         <a href="faqs.html" class="item">FAQs</a>
-        <a href="contact.html" class="item">Contact Us</a>
+        <a href="contact.html" class="active item">Contact Us</a>
     </div>
 
     <!-- Page Contents -->
     <div class="pusher master-padding">
-        <div class="ui inverted vertical masthead center aligned segment hero-section">
-
+        <div class="ui inverted vertical masthead center aligned segment">
             <div class="ui text container">
-                <h2>Do whatever you want when you want to.</h2>
-                <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+                <h1 class="ui inverted header">
+                    Contact Us
+                </h1>
+                <h2>Get in touch with us.</h2>
             </div>
-
         </div>
 
         <div class="ui vertical stripe segment">
-            <div class="ui middle aligned stackable grid container">
-                <div class="row">
-                    <div class="eight wide column">
-                        <h3 class="ui header">We Help Students Thrive</h3>
-                        <p>Our STEM tutoring services are designed to help students master complex concepts and achieve
-                            their academic goals.</p>
-                        <h3 class="ui header">Experienced Tutors</h3>
-                        <p>Our team consists of passionate educators with deep expertise in Science, Technology,
-                            Engineering, and Mathematics.</p>
+            <div class="ui text container">
+                <form class="ui form">
+                    <div class="field">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Name">
                     </div>
-                    <div class="six wide right floated column">
-                        <img src="assets/logo.png" class="ui large bordered rounded image">
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email">
                     </div>
-                </div>
+                    <div class="field">
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <button class="ui button" type="submit">Submit</button>
+                </form>
             </div>
         </div>
 
@@ -97,6 +99,18 @@
     <script>
         $(document)
             .ready(function () {
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function () {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function () {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+
                 // create sidebar and attach to menu open
                 $('.ui.sidebar')
                     .sidebar('attach events', '.toc.item');
