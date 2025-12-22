@@ -103,7 +103,7 @@
 /* Primary Green Override */
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
-    background-color: #6B9C45;
+    background-color: rgb(141, 177, 101);
     /* Custom Bamboo Green */
 }
 
@@ -121,13 +121,13 @@
 }
 
 .ui.menu.bamboo-nav .item {
-    color: #6B9C45 !important;
+    color: rgb(141, 177, 101) !important;
     font-weight: 600;
 }
 
 .ui.menu.bamboo-nav .item.active {
-    background-color: rgba(107, 156, 69, 0.1) !important;
-    color: #6B9C45 !important;
+    background-color: rgba(141, 177, 101, 0.1) !important;
+    color: rgb(141, 177, 101) !important;
 }
 
 .ui.menu.bamboo-nav .header.item img {
@@ -140,6 +140,12 @@
     padding-top: 70px !important;
 }
 
+.hero-logo {
+    width: 250px !important;
+    max-width: 100%;
+    padding-top: 4em;
+}
+
 /* Ethos Section List */
 .ethos-list {
     font-size: 1.33em;
@@ -148,4 +154,62 @@
 
 .ethos-list .item {
     margin-bottom: 0.5em;
+}
+
+/* Subject Pricing Tables */
+.subject-pricing-section {
+    padding-bottom: 5em;
+}
+
+.subject-pricing-section h1.ui.header {
+    font-size: 3em;
+    color: #666;
+    margin-bottom: 0.2em;
+}
+
+.subject-pricing-section p.intro {
+    font-size: 1.2em;
+    color: #999;
+    max-width: 800px;
+    margin: 0 auto 3em auto;
+    text-align: center;
+}
+
+.subject-container {
+    margin-bottom: 4em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subject-title {
+    font-size: 2.5em !important;
+    color: #666 !important;
+    margin-bottom: 1em !important;
+    font-weight: bold !important;
+}
+
+.ui.table.subject-table {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.ui.table.subject-table thead th {
+    background-color: rgb(141, 177, 101) !important;
+    color: #ffffff !important;
+    font-size: 1.2em;
+    padding: 1.2em !important;
+    border: none !important;
+}
+
+.ui.table.subject-table tbody td {
+    padding: 1.2em !important;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.ui.table.subject-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
