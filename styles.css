@@ -139,3 +139,13 @@
 .master-padding {
     padding-top: 70px !important;
 }
+
+/* Ethos Section List */
+.ethos-list {
+    font-size: 1.33em;
+    margin-top: 1em;
+}
+
+.ethos-list .item {
+    margin-bottom: 0.5em;
+}
