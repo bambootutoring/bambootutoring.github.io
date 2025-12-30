@@ -127,6 +127,11 @@
     margin-bottom: 0.5em;
 }
 
+/* Founder Section Justification */
+.founder-section p {
+    text-align: justify;
+}
+
 /* Subject Pricing Tables */
 .subject-pricing-section {
     padding-bottom: 5em;
