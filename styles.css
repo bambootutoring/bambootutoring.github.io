@@ -130,6 +130,7 @@
 /* Founder Section Justification */
 .founder-section p {
     text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Subject Pricing Tables */
