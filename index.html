@@ -92,6 +92,105 @@
             </div>
         </div>
 
+        <!-- Recommendations Carousel -->
+        <div class="ui vertical stripe segment recommendations-section">
+            <div class="ui container">
+                <h2 class="ui center aligned header">What Our Clients Say</h2>
+                <div class="recommendations-carousel">
+                    <div class="carousel-container">
+                        <!-- Recommendation 1 -->
+                        <div class="recommendation-slide active">
+                            <div class="ui card centered">
+                                <div class="content">
+                                    <i class="quote left icon green large"></i>
+                                    <div class="description">
+                                        <p>Sophie is an engaging and supportive tutor who explains STEM topics clearly
+                                            and makes students feel comfortable asking questions. She adapts her
+                                            teaching to different learning styles and is particularly good at helping
+                                            students build confidence and prepare for exams. Her strong subject
+                                            knowledge and patient approach make sessions productive and focused.</p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="header">Parent of Student</div>
+                                    <div class="meta">Testimonial</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recommendation 2 -->
+                        <div class="recommendation-slide">
+                            <div class="ui card centered">
+                                <div class="content">
+                                    <i class="quote left icon green large"></i>
+                                    <div class="description">
+                                        <p>Sophie has a wealth of knowledge in Chemistry and is passionate about the
+                                            subject. Her teaching will always be well-informed and well delivered.</p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="header">Lou</div>
+                                    <div class="meta">Professional Recommendation</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recommendation 3 -->
+                        <div class="recommendation-slide">
+                            <div class="ui card centered">
+                                <div class="content">
+                                    <i class="quote left icon green large"></i>
+                                    <div class="description">
+                                        <p class="long-text">I wholeheartedly recommend Sophie as a science tutor. Her
+                                            PhD research in heterogeneous catalysis gives her a deep, current grasp of
+                                            chemistry, and she brings the same clear thinking to GCSE maths, physics,
+                                            and biology. Patient and perceptive, she pinpoints each student's needs and
+                                            adapts her explanations until concepts click! She blends subject mastery
+                                            with exam techniques, using past papers, mark scheme insights, and practical
+                                            revision tips that turn understanding into confident performance. With this
+                                            mix of expertise, personalised guidance, and strategic exam coaching, Sophie
+                                            routinely helps learners to exceed their goals, while enjoying the journey!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="header">Thomas</div>
+                                    <div class="meta">Professional Recommendation</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recommendation 4 -->
+                        <div class="recommendation-slide">
+                            <div class="ui card centered">
+                                <div class="content">
+                                    <i class="quote left icon green large"></i>
+                                    <div class="description">
+                                        <p>Sophie is an excellent teacher, is able to match pace of learning, break
+                                            things down or reword to explain another way, and is always patient and
+                                            kind!</p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="header">Maisie</div>
+                                    <div class="meta">Student</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="ui circular icon button prev-btn"><i class="left chevron icon"></i></button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
+                        <button class="ui circular icon button next-btn"><i class="right chevron icon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="ui inverted vertical footer segment">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
@@ -119,12 +218,44 @@
     </div>
 
     <script>
-        $(document)
-            .ready(function () {
-                // create sidebar and attach to menu open
-                $('.ui.sidebar')
-                    .sidebar('attach events', '.toc.item');
+        $(document).ready(function () {
+            // Sidebar trigger
+            $('.ui.sidebar').sidebar('attach events', '.toc.item');
+
+            // Recommendation Carousel Logic
+            let currentSlide = 0;
+            const slides = $('.recommendation-slide');
+            const indicators = $('.indicator');
+
+            function showSlide(index) {
+                slides.removeClass('active');
+                indicators.removeClass('active');
+
+                $(slides[index]).addClass('active');
+                $(indicators[index]).addClass('active');
+                currentSlide = index;
+            }
+
+            $('.next-btn').click(function () {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
             });
+
+            $('.prev-btn').click(function () {
+                let prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+            });
+
+            $('.indicator').click(function () {
+                showSlide($(this).data('slide'));
+            });
+
+            // Auto-advance carousel
+            setInterval(function () {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }, 5000);
+        });
     </script>
 </body>
 
