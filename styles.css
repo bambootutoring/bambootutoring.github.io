@@ -450,3 +450,33 @@
         font-size: 1.2em !important;
     }
 }
+
+/* Footer Social Icons */
+.footer-icons {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align left */
+    gap: 1.5em;
+}
+
+.footer-icons a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.footer-icons img {
+    height: 32px !important;
+    width: auto !important;
+    display: block;
+    border-radius: 4px;
+    /* Slight rounding looks better */
+    /* Optional: make icons white to match footer text if needed */
+    /* filter: brightness(0) invert(1); */
+}
+
+.footer-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
