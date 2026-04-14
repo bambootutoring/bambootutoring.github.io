@@ -443,6 +443,60 @@
     line-height: 1.5 !important;
 }
 
+/* Announcement Banner */
+.announcement-banner {
+    background-color: #fffde7; /* Soft yellow to draw attention without being harsh */
+    color: #333;
+    padding: 12px 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid #fff59d;
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.announcement-content {
+    display: flex;
+    padding-right: 4rem; /* Gap between the end of first block and start of second */
+}
+
+.announcement-item {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-right: 4rem; /* Gap between individual announcements */
+    display: flex;
+    align-items: center;
+}
+
+.announcement-item:last-child {
+    margin-right: 0;
+}
+
+.announcement-item i.icon {
+    margin-right: 0.5em;
+    font-size: 1.25em;
+    color: rgb(141, 177, 101); /* Matching the Bamboo brand green */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0); /* Moves exactly half the track width for seamless loop */
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* Container height is now automatic via grid */
 
