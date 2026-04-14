@@ -468,6 +468,7 @@
 .announcement-content {
     display: flex;
     padding-right: 4rem; /* Gap between the end of first block and start of second */
+    flex-shrink: 0;
 }
 
 .announcement-item {
@@ -476,6 +477,8 @@
     margin-right: 4rem; /* Gap between individual announcements */
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .announcement-item:last-child {
