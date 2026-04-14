@@ -467,6 +467,8 @@
 
 .announcement-content {
     display: flex;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
     padding-right: 4rem; /* Gap between the end of first block and start of second */
     flex-shrink: 0;
 }
@@ -478,7 +480,7 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    white-space: nowrap;
+    white-space: nowrap !important;
 }
 
 .announcement-item:last-child {
