@@ -85,8 +85,8 @@
     background-color: #ffffff !important;
     border: none !important;
     border-bottom: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
-    min-height: 72px !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06) !important;
+    min-height: 80px !important;
     margin: 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -97,9 +97,16 @@
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    max-width: 1200px !important;
+    max-width: 1350px !important;
     margin: 0 auto !important;
-    padding: 0 1.5rem !important;
+    padding: 0 2rem !important;
+}
+
+.ui.menu.bamboo-nav .right.menu {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    gap: 0.4rem !important;
 }
 
 .ui.menu.bamboo-nav .toc.item {
@@ -107,11 +114,11 @@
 }
 
 .ui.menu.bamboo-nav .item {
-    color: rgb(110, 145, 75) !important;
+    color: rgb(100, 135, 65) !important;
     font-weight: 600 !important;
-    font-size: 1rem !important;
-    padding: 0.65rem 1.1rem !important;
-    border-radius: 8px !important;
+    font-size: 1.15rem !important;
+    padding: 0.75rem 1.4rem !important;
+    border-radius: 10px !important;
     margin: 0 0.15rem !important;
     transition: all 0.2s ease !important;
 }
@@ -121,21 +128,21 @@
 }
 
 .ui.menu.bamboo-nav .item:hover {
-    background-color: rgba(141, 177, 101, 0.12) !important;
-    color: rgb(90, 125, 55) !important;
+    background-color: rgba(141, 177, 101, 0.14) !important;
+    color: rgb(75, 110, 45) !important;
 }
 
 .ui.menu.bamboo-nav .item.active {
     background-color: rgb(141, 177, 101) !important;
     color: #ffffff !important;
     font-weight: 700 !important;
-    box-shadow: 0 2px 8px rgba(141, 177, 101, 0.3) !important;
+    box-shadow: 0 3px 10px rgba(141, 177, 101, 0.35) !important;
 }
 
 .ui.menu.bamboo-nav .header.item {
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important;
     font-weight: 700 !important;
-    color: #1e293b !important;
+    color: #0f172a !important;
     padding-left: 0 !important;
     margin-right: 2rem !important;
     display: flex !important;
@@ -148,14 +155,14 @@
 }
 
 .ui.menu.bamboo-nav .header.item img {
-    height: 42px !important;
+    height: 48px !important;
     width: auto !important;
-    margin-right: 0.75em !important;
+    margin-right: 0.85em !important;
 }
 
-/* Adjust master padding for 72px fixed header */
+/* Adjust master padding for 80px fixed header */
 .master-padding {
-    padding-top: 72px !important;
+    padding-top: 80px !important;
 }
 
 /* Masthead styling - Inner pages vs Home Hero */
@@ -166,18 +173,18 @@
 .masthead.segment.hero-section {
     min-height: 520px !important;
     padding: 4em 0 !important;
-    display: flex !alignment: center;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .masthead.segment:not(.hero-section) {
     min-height: auto !important;
-    padding: 4.5em 1em 4em 1em !important;
+    padding: 5.5em 1.5em 5em 1.5em !important;
 }
 
 .masthead.segment h1.ui.header {
-    font-size: 3.2em !important;
+    font-size: 3.8em !important;
     font-weight: 800 !important;
     margin-top: 0 !important;
     margin-bottom: 0.3em !important;
@@ -185,30 +192,30 @@
 }
 
 .masthead.segment h2 {
-    font-size: 1.4em !important;
+    font-size: 1.6em !important;
     font-weight: 400 !important;
     opacity: 0.95;
     margin-top: 0 !important;
-    max-width: 700px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
 }
 
 .hero-logo {
-    width: 240px !important;
+    width: 250px !important;
     max-width: 100%;
     margin-bottom: 1.5em !important;
 }
 
 /* General Section Spacing */
 .ui.vertical.stripe {
-    padding: 4.5em 0em !important;
+    padding: 5.5em 0em !important;
 }
 
 /* Ethos Section List */
 .ethos-list {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 1em;
 }
 
@@ -217,116 +224,128 @@
 }
 
 /* Founder Section Styling */
+.founder-section {
+    max-width: 1000px !important;
+}
+
 .founder-section p {
     text-align: left;
     line-height: 1.8;
-    font-size: 1.15em;
+    font-size: 1.25em !important;
     color: #334155;
 }
 
 /* Subject Pricing Tables */
 .subject-pricing-section {
-    padding-bottom: 5em;
+    padding-bottom: 5.5em !important;
 }
 
 .subject-pricing-section h1.ui.header {
-    font-size: 3em;
-    color: #666;
-    margin-bottom: 0.2em;
+    font-size: 3.5em !important;
+    color: #1e293b !important;
+    margin-bottom: 0.3em !important;
+    font-weight: 800 !important;
 }
 
 .subject-pricing-section p.intro {
-    font-size: 1.2em;
-    color: #999;
-    max-width: 800px;
-    margin: 0 auto 3em auto;
-    text-align: center;
+    font-size: 1.35em !important;
+    color: #475569 !important;
+    max-width: 900px !important;
+    margin: 0 auto 1.5em auto !important;
+    line-height: 1.6;
 }
 
 .subject-container {
-    margin-bottom: 4em;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 4.5em !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .subject-title {
     font-size: 2.5em !important;
-    color: #666 !important;
-    margin-bottom: 1em !important;
-    font-weight: bold !important;
+    color: rgb(100, 135, 65) !important;
+    margin-bottom: 0.8em !important;
+    font-weight: 800 !important;
 }
 
 .ui.table.subject-table {
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+    border-radius: 16px !important;
     overflow: hidden;
 }
 
 .ui.table.subject-table thead th {
     background-color: rgb(141, 177, 101) !important;
     color: #ffffff !important;
-    font-size: 1.2em;
-    padding: 1.2em !important;
+    font-size: 1.3em !important;
+    padding: 1.3em 1.6em !important;
     border: none !important;
+    font-weight: 700 !important;
 }
 
 .ui.table.subject-table tbody td {
-    padding: 1.2em !important;
-    font-size: 1.1em;
-    color: #666;
+    padding: 1.3em 1.6em !important;
+    font-size: 1.25em !important;
+    color: #334155 !important;
 }
 
 .ui.table.subject-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8fafc;
 }
 
 /* Subject Featured Rows */
 .featured-subjects {
-    padding: 5em 0;
-    background-color: #fcfcfc;
+    padding: 5.5em 0 !important;
+    background-color: #f8fafc;
 }
 
 .featured-subjects h2.ui.header {
-    font-size: 3em;
-    margin-bottom: 2em;
-    color: #333;
+    font-size: 3.5em !important;
+    margin-bottom: 1.5em !important;
+    color: #1e293b !important;
+    font-weight: 800 !important;
 }
 
 .subject-row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 3em;
-    gap: 4em;
-    max-width: 1100px;
+    margin-bottom: 3.5em;
+    gap: 3.5em;
+    max-width: 1200px !important;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
-    border: 2px solid rgba(141, 177, 101, 0.1);
-    border-radius: 25px;
-    padding: 3.5em;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    border: 2px solid rgba(141, 177, 101, 0.18);
+    border-radius: 24px;
+    padding: 3.5em 4em;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .subject-image {
-    flex: 0 0 160px;
+    flex: 0 0 170px;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .subject-image img {
-    width: 100%;
-    height: 160px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    border-radius: 15px;
+    border-radius: 16px;
     transition: transform 0.4s ease;
 }
 
 .subject-row:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(141, 177, 101, 0.12);
-    border-color: rgba(141, 177, 101, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(141, 177, 101, 0.15);
+    border-color: rgba(141, 177, 101, 0.5);
 }
 
 .subject-description {
@@ -334,19 +353,17 @@
 }
 
 .subject-description h3 {
-    font-size: 2.2em !important;
-    margin-bottom: 0.6em !important;
-    font-weight: 700 !important;
-    color: rgb(141, 177, 101);
-    /* Correct Bamboo Green */
+    font-size: 2.3em !important;
+    margin-bottom: 0.5em !important;
+    font-weight: 800 !important;
+    color: rgb(100, 135, 65) !important;
 }
 
 .subject-description p {
-    font-size: 1.25em !important;
-    line-height: 1.7;
-    color: #444;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 1.3em !important;
+    line-height: 1.75 !important;
+    color: #334155 !important;
+    text-align: left !important;
     margin-bottom: 0 !important;
 }
 
